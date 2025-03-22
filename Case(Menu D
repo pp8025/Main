@@ -1,0 +1,118 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+int ch,i,j,count=0;
+
+char s1[10],s2[10];
+
+clrscr();
+
+do
+
+{
+
+printf("Menu\n1. length of a string\n2. copy a string\n3. reverse of a string\n4.for exit");
+printf("\nEnter choice :");
+
+scanf("%d",&ch);
+
+switch(ch)
+
+{
+
+case 1 :
+
+printf("Enter the string :\n");
+
+flushall();
+
+gets(s1);
+
+for(i=0;s1[i]!='\0';i++)
+
+{
+
+count++;
+
+}
+
+printf("Length of string is %d\n",count);
+
+break;
+
+case 2 :
+
+printf("Enter the string :\n");
+
+flushall();
+
+gets(s1);
+
+for(i=0;s1[i]!='\0';i++)
+
+{
+
+s2[i]=s1[i];
+
+}
+
+s2[i]='\0';
+printf("Orignal string :\n");
+
+puts(s1);
+
+printf("string after copy :\n");
+
+puts(s2);
+
+break;
+
+case 3 :
+
+printf("Enter the string :\n");
+
+flushall();
+
+gets(s1);
+
+for(i=0;s1[i]!='\0';i++);
+
+for(i--,j=0;i>=0;i--,j++)
+
+{
+
+s2[j]=s1[i];
+
+}
+
+s2[j]='\0';
+
+printf("Orginal string :\n");
+
+puts(s1);
+
+printf("Reversed string :");
+
+puts(s2);
+
+break;
+
+case 4 :
+
+exit(0);
+
+default:
+printf("invalid");
+
+}
+
+}while(ch!=4);
+
+getch();
+
+}
