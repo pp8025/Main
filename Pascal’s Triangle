@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+int i,j,c,s,l;
+
+clrscr();
+
+printf("Enter the limit");
+
+scanf("%d",&l);
+
+for(i=0;i<l;i++)
+
+{
+
+for(s=0;s<=l-i;s++)
+
+{
+
+printf(" ");
+
+}
+
+for(j=0;j<=i;j++)
+
+{
+
+if(i==0 || j==0)
+
+c=1;
+
+else
+
+c=(c*(i-j+1))/j;
+
+printf(" %d",c);
+}
+
+printf("\n");
+
+}
+
+getch();
+
+}
